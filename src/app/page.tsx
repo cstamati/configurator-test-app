@@ -2,7 +2,7 @@
 
 import Streamer from "../components/streamer";
 
-const url = "https://streams.vagon.io/streams/d5f4dff2-1b7c-4710-93a1-b76f7867703f";
+const url = "https://streams.vagon.io/streams/138c66e1-1992-423c-ad9c-cccf581b5efa";
 export default function Home() {
 
     return (
