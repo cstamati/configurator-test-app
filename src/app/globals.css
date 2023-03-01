@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .aspect-ratio-16-9 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        transform: translate(-50%, -50%);
+    }
+    @media (min-aspect-ratio: 16/9){
+        .custom-aspect-16-9{
+            @apply h-[56.25vw];
+        }
+    }
+    @media (max-aspect-ratio: 16/9){
+        .custom-aspect-not-16-9{
+            @apply w-[177.78vh];
+        }
+    }
+
+
+    /* SCROLL BAR */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .filter-gold {
+        filter: invert(78%) sepia(21%) saturate(459%) hue-rotate(359deg) brightness(90%) contrast(86%);
+    }
+
+    .select{
+        @apply border-4 border-primary;
+    }
+
+    /* TEMP ALERT */
+    #alert_container{
+        @apply absolute grid gap-4 bottom-0 right-0 z-30 p-4;
+    }
+    #temp_alert{
+        @apply bg-white text-xl p-4 rounded shadow-2xl;
+    }
+}
